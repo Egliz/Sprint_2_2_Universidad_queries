@@ -12,7 +12,7 @@ SELECT nombre,
        apellido1,
        apellido2
 FROM persona
-WHERE telefono IS NULL:
+WHERE telefono IS NULL;
 
 -- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, apellido1, apellido2, fecha_nacimiento)
 SELECT id,
