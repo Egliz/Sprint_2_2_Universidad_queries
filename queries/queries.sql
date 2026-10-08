@@ -247,7 +247,10 @@ GROUP BY persona.id,
 ORDER BY total DESC;
 
 -- 25. Retorna totes les dades de l'alumne/a més jove. (*)
-
+SELECT * FROM persona
+WHERE persona.tipo = 'alumno'
+ORDER BY persona.fecha_nacimiento DESC
+LIMIT 1;
 
 -- 26. Retorna un llistat amb els professors/es que tenen un departament associat i que no imparteixen cap assignatura. (apellido1, apellido2, nombre)
 
