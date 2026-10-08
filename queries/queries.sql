@@ -161,7 +161,9 @@ LEFT JOIN asignatura
 WHERE asignatura.id IS NULL;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
-
+SELECT COUNT(*) AS total
+FROM persona
+WHERE persona.tipo = 'alumno';
 
 -- 17. Calcula quants alumnes van néixer en 1999. (total)
 
