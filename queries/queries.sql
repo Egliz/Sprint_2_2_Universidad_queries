@@ -190,7 +190,13 @@ GROUP BY departamento.id, departamento.nombre
 ORDER BY total DESC;
 
 -- 20. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun. Tingues en compte que poden existir graus que no tenen assignatures associades. Aquests graus també han d'aparèixer en el llistat. El resultat haurà d'estar ordenat de major a menor pel nombre d'assignatures. (grau, total)
-
+SELECT grado.nombre AS grado,
+COUNT(asignatura.id) AS total
+FROM grado
+LEFT JOIN asignatura
+    ON grado.id = asignatura.id_grado
+GROUP BY grado.id, grado.nombre
+ORDER BY total DESC;
 
 -- 21. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun, dels graus que tinguin més de 40 assignatures associades. (grau, total)
 
