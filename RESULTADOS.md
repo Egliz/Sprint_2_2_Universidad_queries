@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 22 queries
+✅ 0 correctas de 23 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.20 ms
+⏱ Tiempo: 0.18 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,7 +83,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.23 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -115,8 +115,8 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.27 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.32 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY, PRIMARY,nif
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
 
 ---
 
@@ -162,8 +162,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.24 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
+⏱ Tiempo: 0.28 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento, id_profesor,id_grado
 
 ---
 
@@ -180,8 +180,8 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.23 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
+⏱ Tiempo: 0.25 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
@@ -209,7 +209,7 @@
 +Química y Física | Stiedemann | Morissette | Alfredo
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.28 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -235,7 +235,7 @@
 +apellido1 | apellido2 | nombre
 ```
 
-⏱ Tiempo: 0.16 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -252,7 +252,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.13 ms
+⏱ Tiempo: 0.16 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -279,8 +279,8 @@
 +Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.15 ms
-✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
+⏱ Tiempo: 0.26 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
 
@@ -365,7 +365,7 @@
 +83.00 | Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.19 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -454,8 +454,8 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.14 ms
-✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
+⏱ Tiempo: 0.20 ms
+✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
 
 ---
 
@@ -478,7 +478,7 @@
 +12.00
 ```
 
-⏱ Tiempo: 0.12 ms
+⏱ Tiempo: 0.16 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -493,7 +493,7 @@
 +2.00
 ```
 
-⏱ Tiempo: 0.12 ms
+⏱ Tiempo: 0.20 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -514,8 +514,8 @@
 +Agronomía | 1.00
 ```
 
-⏱ Tiempo: 0.15 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
+⏱ Tiempo: 0.20 ms
+✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
 
 ---
 
@@ -532,7 +532,7 @@
 +Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.15 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -565,7 +565,7 @@
 +Grado en Química (Plan 2009) | 0.00
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.22 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -589,7 +589,7 @@
 -Grado en Química (Plan 2009) | 0.00
 ```
 
-⏱ Tiempo: 0.15 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -609,11 +609,32 @@
 +Grado en Biotecnología (Plan 2015) | obligatoria | 120.00
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
-## ❌ Query 22: Error
+## ❌ Query 22: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,6 +1,3 @@
+-grau | tipo | total_creditos
+-Grado en Ingeniería Informática (Plan 2015) | básica | 72.00
+-Grado en Ingeniería Informática (Plan 2015) | obligatoria | 54.00
+-Grado en Ingeniería Informática (Plan 2015) | optativa | 180.00
+-Grado en Biotecnología (Plan 2015) | básica | 60.00
+-Grado en Biotecnología (Plan 2015) | obligatoria | 120.00
++anyo_inicio | total
++2014.00 | 3.00
++2018.00 | 3.00
+```
+
+⏱ Tiempo: 0.24 ms
+✅ Se usó índice(s) en la consulta: id_curso_escolar, PRIMARY
+
+---
+
+## ❌ Query 23: Error
 - **Descripción**: 'NoneType' object is not iterable
 
