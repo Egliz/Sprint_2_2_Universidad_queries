@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 9 queries
+✅ 0 correctas de 10 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,7 +83,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -115,8 +115,8 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.37 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.48 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
+⏱ Tiempo: 0.61 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
@@ -162,8 +162,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.40 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
 
 ---
 
@@ -180,11 +180,40 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.39 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
-## ❌ Query 9: Error
+## ❌ Query 9: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,4 +1,13 @@
+-nombre | apellido1 | apellido2
+-Inma | Lakin | Yundt
+-Irene | Hernández | Martínez
+-Sonia | Gea | Ruiz
++departamento | apellido1 | apellido2 | nombre
++Agronomía | Monahan | Murray | Micaela
++Economía y Empresa | Fahey | Considine | Antonio
++Economía y Empresa | Lemke | Rutherford | Cristina
++Educación | Ruecker | Upton | Guillermo
++Educación | Spencer | Lakin | Esther
++Educación | Streich | Hirthe | Carmen
++Informática | Hamill | Kozey | Manolo
++Informática | Ramirez | Gea | Zoe
++Matemáticas | Kohler | Schoen | Alejandro
++Matemáticas | Schmidt | Fisher | David
++Química y Física | Schowalter | Muller | Francesca
++Química y Física | Stiedemann | Morissette | Alfredo
+```
+
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY
+
+---
+
+## ❌ Query 10: Error
 - **Descripción**: 'NoneType' object is not iterable
 
