@@ -253,4 +253,15 @@ ORDER BY persona.fecha_nacimiento DESC
 LIMIT 1;
 
 -- 26. Retorna un llistat amb els professors/es que tenen un departament associat i que no imparteixen cap assignatura. (apellido1, apellido2, nombre)
-
+SELECT persona.apellido1,
+       persona.apellido2,
+       persona.nombre
+FROM persona
+JOIN profesor
+    ON persona.id = profesor.id_profesor
+JOIN departamento
+    ON profesor.id_departamento = departamento.id
+LEFT JOIN asignatura
+    ON profesor.id_profesor = asignatura.id_profesor
+WHERE persona.tipo = 'profesor'
+  AND asignatura.id IS NULL;
