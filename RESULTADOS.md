@@ -42,5 +42,7 @@
 ---
 
 ## ❌ Query 2: Error
-- **Descripción**: 'NoneType' object is not iterable
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':
+
+-- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, a' at line 6
 
