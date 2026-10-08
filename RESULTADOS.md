@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 17 queries
+✅ 0 correctas de 18 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.22 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,7 +83,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.26 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -115,8 +115,8 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.39 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
+⏱ Tiempo: 0.34 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.51 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
@@ -162,8 +162,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
+⏱ Tiempo: 0.27 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
 
 ---
 
@@ -180,7 +180,7 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
@@ -209,7 +209,7 @@
 +Química y Física | Stiedemann | Morissette | Alfredo
 ```
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.28 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -235,7 +235,7 @@
 +apellido1 | apellido2 | nombre
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -252,7 +252,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.21 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -279,7 +279,7 @@
 +Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.25 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
@@ -365,7 +365,7 @@
 +83.00 | Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.22 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -454,8 +454,8 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
+⏱ Tiempo: 0.22 ms
+✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
 
 ---
 
@@ -478,7 +478,7 @@
 +12.00
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.20 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -493,11 +493,32 @@
 +2.00
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.21 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 17: Error
+## ❌ Query 17: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,2 +1,7 @@
+-total
+-2.00
++departamento | total
++Educación | 3.00
++Informática | 2.00
++Matemáticas | 2.00
++Economía y Empresa | 2.00
++Química y Física | 2.00
++Agronomía | 1.00
+```
+
+⏱ Tiempo: 0.24 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
+
+---
+
+## ❌ Query 18: Error
 - **Descripción**: 'NoneType' object is not iterable
 
