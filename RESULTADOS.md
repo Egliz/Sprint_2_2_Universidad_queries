@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 19 queries
+✅ 0 correctas de 20 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.24 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,7 +83,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.73 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -115,7 +115,7 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.41 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.49 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY, PRIMARY,nif
+⏱ Tiempo: 0.53 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar, PRIMARY
 
 ---
 
@@ -162,8 +162,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
@@ -180,7 +180,7 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.36 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
@@ -209,7 +209,7 @@
 +Química y Física | Stiedemann | Morissette | Alfredo
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.42 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -235,7 +235,7 @@
 +apellido1 | apellido2 | nombre
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -252,7 +252,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.22 ms
+⏱ Tiempo: 0.30 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -279,7 +279,7 @@
 +Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
@@ -365,7 +365,7 @@
 +83.00 | Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -454,8 +454,8 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.26 ms
-✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
+⏱ Tiempo: 0.32 ms
+✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
 
 ---
 
@@ -478,7 +478,7 @@
 +12.00
 ```
 
-⏱ Tiempo: 0.21 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -493,7 +493,7 @@
 +2.00
 ```
 
-⏱ Tiempo: 0.23 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -514,7 +514,7 @@
 +Agronomía | 1.00
 ```
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
 
 ---
@@ -532,11 +532,44 @@
 +Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
-## ❌ Query 19: Error
+## ❌ Query 19: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,10 +1,11 @@
+-departamento | total
+-Informática | 2.00
+-Matemáticas | 2.00
+-Economía y Empresa | 2.00
+-Educación | 3.00
+-Agronomía | 1.00
+-Química y Física | 2.00
+-Filología | 0.00
+-Derecho | 0.00
+-Biología y Geología | 0.00
++grado | total
++Grado en Ingeniería Informática (Plan 2015) | 51.00
++Grado en Biotecnología (Plan 2015) | 32.00
++Grado en Ingeniería Agrícola (Plan 2015) | 0.00
++Grado en Ingeniería Eléctrica (Plan 2014) | 0.00
++Grado en Ingeniería Electrónica Industrial (Plan 2010) | 0.00
++Grado en Ingeniería Mecánica (Plan 2010) | 0.00
++Grado en Ingeniería Química Industrial (Plan 2010) | 0.00
++Grado en Ciencias Ambientales (Plan 2009) | 0.00
++Grado en Matemáticas (Plan 2010) | 0.00
++Grado en Química (Plan 2009) | 0.00
+```
+
+⏱ Tiempo: 0.32 ms
+✅ Se usó índice(s) en la consulta: id_grado
+
+---
+
+## ❌ Query 20: Error
 - **Descripción**: 'NoneType' object is not iterable
 
