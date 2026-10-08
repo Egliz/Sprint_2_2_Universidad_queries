@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 6 queries
+✅ 0 correctas de 7 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.44 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,7 +83,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -115,11 +115,40 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.41 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
-## ❌ Query 6: Error
+## ❌ Query 6: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,13 +1,4 @@
+-apellido1 | apellido2 | nombre | departamento
+-Fahey | Considine | Antonio | Economía y Empresa
+-Hamill | Kozey | Manolo | Informática
+-Kohler | Schoen | Alejandro | Matemáticas
+-Lemke | Rutherford | Cristina | Economía y Empresa
+-Monahan | Murray | Micaela | Agronomía
+-Ramirez | Gea | Zoe | Informática
+-Ruecker | Upton | Guillermo | Educación
+-Schmidt | Fisher | David | Matemáticas
+-Schowalter | Muller | Francesca | Química y Física
+-Spencer | Lakin | Esther | Educación
+-Stiedemann | Morissette | Alfredo | Química y Física
+-Streich | Hirthe | Carmen | Educación
++nombre | anyo_inicio | anyo_fin
++Álgegra lineal y matemática discreta | 2014.00 | 2015.00
++Cálculo | 2014.00 | 2015.00
++Física para informática | 2014.00 | 2015.00
+```
+
+⏱ Tiempo: 0.54 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar
+
+---
+
+## ❌ Query 7: Error
 - **Descripción**: 'NoneType' object is not iterable
 
