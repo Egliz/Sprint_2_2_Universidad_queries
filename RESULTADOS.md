@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 24 queries
+✅ 0 correctas de 25 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.22 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.21 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,7 +83,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.15 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -115,8 +115,8 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.21 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.28 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.28 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
@@ -162,8 +162,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.19 ms
-✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.31 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
 
 ---
 
@@ -180,8 +180,8 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.18 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.25 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
@@ -209,7 +209,7 @@
 +Química y Física | Stiedemann | Morissette | Alfredo
 ```
 
-⏱ Tiempo: 0.18 ms
+⏱ Tiempo: 0.28 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -235,7 +235,7 @@
 +apellido1 | apellido2 | nombre
 ```
 
-⏱ Tiempo: 0.15 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -252,7 +252,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.12 ms
+⏱ Tiempo: 0.21 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -279,7 +279,7 @@
 +Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.17 ms
+⏱ Tiempo: 0.26 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
@@ -365,7 +365,7 @@
 +83.00 | Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.21 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -454,7 +454,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.13 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
 
 ---
@@ -478,7 +478,7 @@
 +12.00
 ```
 
-⏱ Tiempo: 0.12 ms
+⏱ Tiempo: 0.20 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -493,7 +493,7 @@
 +2.00
 ```
 
-⏱ Tiempo: 0.12 ms
+⏱ Tiempo: 0.21 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -514,7 +514,7 @@
 +Agronomía | 1.00
 ```
 
-⏱ Tiempo: 0.15 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
 
 ---
@@ -532,7 +532,7 @@
 +Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -565,7 +565,7 @@
 +Grado en Química (Plan 2009) | 0.00
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -589,7 +589,7 @@
 -Grado en Química (Plan 2009) | 0.00
 ```
 
-⏱ Tiempo: 0.17 ms
+⏱ Tiempo: 0.25 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -609,7 +609,7 @@
 +Grado en Biotecnología (Plan 2015) | obligatoria | 120.00
 ```
 
-⏱ Tiempo: 0.14 ms
+⏱ Tiempo: 0.23 ms
 ✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
 
 ---
@@ -630,8 +630,8 @@
 +2018.00 | 3.00
 ```
 
-⏱ Tiempo: 0.17 ms
-✅ Se usó índice(s) en la consulta: id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.29 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_curso_escolar
 
 ---
 
@@ -658,11 +658,41 @@
 +20.00 | Francesca | Schowalter | Muller | 0.00
 ```
 
-⏱ Tiempo: 0.17 ms
+⏱ Tiempo: 0.26 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
 
-## ❌ Query 24: Error
+## ❌ Query 24: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,13 +1,2 @@
+-id | nombre | apellido1 | apellido2 | total
+-14.00 | Manolo | Hamill | Kozey | 11.00
+-3.00 | Zoe | Ramirez | Gea | 10.00
+-5.00 | David | Schmidt | Fisher | 0.00
+-15.00 | Alejandro | Kohler | Schoen | 0.00
+-8.00 | Cristina | Lemke | Rutherford | 0.00
+-16.00 | Antonio | Fahey | Considine | 0.00
+-10.00 | Esther | Spencer | Lakin | 0.00
+-12.00 | Carmen | Streich | Hirthe | 0.00
+-17.00 | Guillermo | Ruecker | Upton | 0.00
+-18.00 | Micaela | Monahan | Murray | 0.00
+-13.00 | Alfredo | Stiedemann | Morissette | 0.00
+-20.00 | Francesca | Schowalter | Muller | 0.00
++id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
++4.00 | 17105885A | Pedro | Heller | Pagac | Almería | C/ Estrella fugaz | NULL | 2000-10-05 | H | alumno
+```
+
+⏱ Tiempo: 0.21 ms
+🔍 No se usó ningún índice en esta consulta.
+
+🚨 **Problemas detectados:**
+⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
+
+---
+
+## ❌ Query 25: Error
 - **Descripción**: 'NoneType' object is not iterable
 
