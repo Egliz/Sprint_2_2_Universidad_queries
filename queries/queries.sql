@@ -173,15 +173,21 @@ AND YEAR(persona.fecha_nacimiento) = 1999;
 
 -- 18. Calcula quants professors/es hi ha en cada departament. El resultat només ha de mostrar dues columnes, una amb el nom del departament i una altra amb el nombre de professors/es que hi ha en aquest departament. El resultat només ha d'incloure els departaments que tenen professors/es associats i haurà d'estar ordenat de major a menor pel nombre de professors/es. (departamento, total)
 SELECT departamento.nombre AS departamento,
-       COUNT(profesor.id_profesor) AS total
+COUNT(profesor.id_profesor) AS total
 FROM departamento
-INNER JOIN profesor
+JOIN profesor
     ON departamento.id = profesor.id_departamento
 GROUP BY departamento.id, departamento.nombre
 ORDER BY total DESC;
 
 -- 19. Retorna un llistat amb tots els departaments i el nombre de professors/es que hi ha en cadascun d'ells. Tingui en compte que poden existir departaments que no tenen professors/es associats. Aquests departaments també han d'aparèixer en el llistat. (departamento, total)
-
+SELECT departamento.nombre AS departamento,
+COUNT(profesor.id_profesor) AS total
+FROM departamento
+LEFT JOIN profesor
+    ON departamento.id = profesor.id_departamento
+GROUP BY departamento.id, departamento.nombre
+ORDER BY total DESC;
 
 -- 20. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun. Tingues en compte que poden existir graus que no tenen assignatures associades. Aquests graus també han d'aparèixer en el llistat. El resultat haurà d'estar ordenat de major a menor pel nombre d'assignatures. (grau, total)
 
