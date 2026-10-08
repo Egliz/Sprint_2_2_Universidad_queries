@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 4 queries
+✅ 0 correctas de 5 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,11 +61,33 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.24 ms
+⏱ Tiempo: 0.21 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 4: Error
+## ❌ Query 4: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,3 +1,7 @@
+-nombre | apellido1 | apellido2 | nif
+-Antonio | Fahey | Considine | 10485008K
+-Guillermo | Ruecker | Upton | 85869555K
++id | nombre | cuatrimestre | curso | id_grado
++72.00 | Bases moleculares del desarrollo vegetal | 1.00 | 3.00 | 7.00
++73.00 | Fisiología animal | 1.00 | 3.00 | 7.00
++74.00 | Metabolismo y biosíntesis de biomoléculas | 1.00 | 3.00 | 7.00
++75.00 | Operaciones de separación | 1.00 | 3.00 | 7.00
++76.00 | Patología molecular de plantas | 1.00 | 3.00 | 7.00
++77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
+```
+
+⏱ Tiempo: 0.22 ms
+✅ Se usó índice(s) en la consulta: id_grado
+
+---
+
+## ❌ Query 5: Error
 - **Descripción**: 'NoneType' object is not iterable
 
