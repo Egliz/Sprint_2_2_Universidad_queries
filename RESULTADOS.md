@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 8 queries
+✅ 0 correctas de 9 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.45 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,7 +83,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -115,8 +115,8 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.40 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.49 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY, PRIMARY,nif
+⏱ Tiempo: 0.48 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
@@ -162,11 +162,29 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento, id_profesor,id_grado
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
 
 ---
 
-## ❌ Query 8: Error
+## ❌ Query 8: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,2 +1,4 @@
+-nombre
+-Informática
++nombre | apellido1 | apellido2
++Inma | Lakin | Yundt
++Irene | Hernández | Martínez
++Sonia | Gea | Ruiz
+```
+
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+
+---
+
+## ❌ Query 9: Error
 - **Descripción**: 'NoneType' object is not iterable
 
