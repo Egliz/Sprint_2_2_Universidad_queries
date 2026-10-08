@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 2 queries
+✅ 0 correctas de 3 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -45,4 +45,8 @@
 - **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':
 
 -- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, a' at line 6
+
+
+## ❌ Query 3: Error
+- **Descripción**: 'NoneType' object is not iterable
 
