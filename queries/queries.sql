@@ -132,7 +132,16 @@ LEFT JOIN profesor
 WHERE profesor.id_profesor IS NULL;
 
 -- 13. Retorna un llistat amb els professors/es que no imparteixen cap assignatura. (apellido1, apellido2, nombre)
-
+SELECT persona.apellido1,
+       persona.apellido2,
+       persona.nombre
+FROM persona
+JOIN profesor
+    ON persona.id = profesor.id_profesor
+LEFT JOIN asignatura
+    ON profesor.id_profesor = asignatura.id_profesor
+WHERE persona.tipo = 'profesor'
+  AND asignatura.id IS NULL;
 
 -- 14. Retorna un llistat amb les assignatures que no tenen un professor/a assignat. (id, nombre)
 
