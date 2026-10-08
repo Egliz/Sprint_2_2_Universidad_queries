@@ -87,9 +87,9 @@ SELECT DISTINCT persona.nombre,
        persona.apellido1,
        persona.apellido2
 FROM persona
-INNER JOIN alumno_se_matricula_asignatura
+JOIN alumno_se_matricula_asignatura
     ON persona.id = alumno_se_matricula_asignatura.id_alumno
-INNER JOIN curso_escolar
+JOIN curso_escolar
     ON alumno_se_matricula_asignatura.id_curso_escolar = curso_escolar.id
 WHERE persona.tipo = 'alumno'
   AND curso_escolar.anyo_inicio = 2018
@@ -97,7 +97,20 @@ WHERE persona.tipo = 'alumno'
 
 -- Resol les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
 -- 10. Retorna un llistat amb els noms de tots els professors/es i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors/es que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor/a. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom. (departamento, apellido1, apellido2, nombre)
-
+SELECT departamento.nombre AS departamento,
+       persona.apellido1,
+       persona.apellido2,
+       persona.nombre
+FROM persona
+JOIN profesor
+    ON persona.id = profesor.id_profesor
+LEFT JOIN departamento
+    ON profesor.id_departamento = departamento.id
+WHERE persona.tipo = 'profesor'
+ORDER BY departamento.nombre ASC,
+         persona.apellido1 ASC,
+         persona.apellido2 ASC,
+         persona.nombre ASC;
 
 -- 11. Retorna un llistat amb els professors/es que no estan associats a un departament. (apellido1, apellido2, nombre)
 
