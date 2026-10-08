@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.21 ms
+⏱ Tiempo: 0.18 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -115,8 +115,8 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.28 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.42 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
 
 ---
 
@@ -162,8 +162,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.31 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
+⏱ Tiempo: 0.28 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
@@ -180,8 +180,8 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.25 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
+⏱ Tiempo: 0.26 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
@@ -209,7 +209,7 @@
 +Química y Física | Stiedemann | Morissette | Alfredo
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -235,7 +235,7 @@
 +apellido1 | apellido2 | nombre
 ```
 
-⏱ Tiempo: 0.24 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -252,7 +252,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.21 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -279,8 +279,8 @@
 +Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.26 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
+⏱ Tiempo: 0.27 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
 
@@ -365,7 +365,7 @@
 +83.00 | Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.21 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -454,7 +454,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.23 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
 
 ---
@@ -478,7 +478,7 @@
 +12.00
 ```
 
-⏱ Tiempo: 0.20 ms
+⏱ Tiempo: 0.22 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -493,7 +493,7 @@
 +2.00
 ```
 
-⏱ Tiempo: 0.21 ms
+⏱ Tiempo: 0.22 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -514,8 +514,8 @@
 +Agronomía | 1.00
 ```
 
-⏱ Tiempo: 0.24 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
+⏱ Tiempo: 0.28 ms
+✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
 
 ---
 
@@ -532,7 +532,7 @@
 +Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.26 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -565,7 +565,7 @@
 +Grado en Química (Plan 2009) | 0.00
 ```
 
-⏱ Tiempo: 0.23 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -589,7 +589,7 @@
 -Grado en Química (Plan 2009) | 0.00
 ```
 
-⏱ Tiempo: 0.25 ms
+⏱ Tiempo: 0.22 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -609,7 +609,7 @@
 +Grado en Biotecnología (Plan 2015) | obligatoria | 120.00
 ```
 
-⏱ Tiempo: 0.23 ms
+⏱ Tiempo: 0.21 ms
 ✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
 
 ---
@@ -630,8 +630,8 @@
 +2018.00 | 3.00
 ```
 
-⏱ Tiempo: 0.29 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_curso_escolar
+⏱ Tiempo: 0.22 ms
+✅ Se usó índice(s) en la consulta: id_curso_escolar, PRIMARY
 
 ---
 
@@ -658,8 +658,8 @@
 +20.00 | Francesca | Schowalter | Muller | 0.00
 ```
 
-⏱ Tiempo: 0.26 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
+⏱ Tiempo: 0.52 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
 
@@ -693,6 +693,27 @@
 
 ---
 
-## ❌ Query 25: Error
-- **Descripción**: 'NoneType' object is not iterable
+## ❌ Query 25: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,2 +1,11 @@
+-id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
+-4.00 | 17105885A | Pedro | Heller | Pagac | Almería | C/ Estrella fugaz | NULL | 2000-10-05 | H | alumno
++apellido1 | apellido2 | nombre
++Schmidt | Fisher | David
++Kohler | Schoen | Alejandro
++Lemke | Rutherford | Cristina
++Fahey | Considine | Antonio
++Spencer | Lakin | Esther
++Streich | Hirthe | Carmen
++Ruecker | Upton | Guillermo
++Monahan | Murray | Micaela
++Stiedemann | Morissette | Alfredo
++Schowalter | Muller | Francesca
+```
 
+⏱ Tiempo: 0.26 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY,id_departamento, PRIMARY
+
+---
