@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 5 queries
+✅ 0 correctas de 6 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.21 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -83,11 +83,43 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.22 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
-## ❌ Query 5: Error
+## ❌ Query 5: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,7 +1,13 @@
+-id | nombre | cuatrimestre | curso | id_grado
+-72.00 | Bases moleculares del desarrollo vegetal | 1.00 | 3.00 | 7.00
+-73.00 | Fisiología animal | 1.00 | 3.00 | 7.00
+-74.00 | Metabolismo y biosíntesis de biomoléculas | 1.00 | 3.00 | 7.00
+-75.00 | Operaciones de separación | 1.00 | 3.00 | 7.00
+-76.00 | Patología molecular de plantas | 1.00 | 3.00 | 7.00
+-77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
++apellido1 | apellido2 | nombre | departamento
++Fahey | Considine | Antonio | Economía y Empresa
++Hamill | Kozey | Manolo | Informática
++Kohler | Schoen | Alejandro | Matemáticas
++Lemke | Rutherford | Cristina | Economía y Empresa
++Monahan | Murray | Micaela | Agronomía
++Ramirez | Gea | Zoe | Informática
++Ruecker | Upton | Guillermo | Educación
++Schmidt | Fisher | David | Matemáticas
++Schowalter | Muller | Francesca | Química y Física
++Spencer | Lakin | Esther | Educación
++Stiedemann | Morissette | Alfredo | Química y Física
++Streich | Hirthe | Carmen | Educación
+```
+
+⏱ Tiempo: 0.41 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+
+---
+
+## ❌ Query 6: Error
 - **Descripción**: 'NoneType' object is not iterable
 
