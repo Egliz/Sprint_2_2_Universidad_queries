@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 10 queries
+✅ 0 correctas de 11 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -36,7 +36,7 @@
  Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -61,7 +61,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -115,7 +115,7 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.42 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
@@ -144,8 +144,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.61 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar
+⏱ Tiempo: 0.52 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
 
 ---
 
@@ -162,8 +162,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY, PRIMARY,id_departamento
 
 ---
 
@@ -180,8 +180,8 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
@@ -214,6 +214,32 @@
 
 ---
 
-## ❌ Query 10: Error
+## ❌ Query 10: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,13 +1 @@
+-departamento | apellido1 | apellido2 | nombre
+-Agronomía | Monahan | Murray | Micaela
+-Economía y Empresa | Fahey | Considine | Antonio
+-Economía y Empresa | Lemke | Rutherford | Cristina
+-Educación | Ruecker | Upton | Guillermo
+-Educación | Spencer | Lakin | Esther
+-Educación | Streich | Hirthe | Carmen
+-Informática | Hamill | Kozey | Manolo
+-Informática | Ramirez | Gea | Zoe
+-Matemáticas | Kohler | Schoen | Alejandro
+-Matemáticas | Schmidt | Fisher | David
+-Química y Física | Schowalter | Muller | Francesca
+-Química y Física | Stiedemann | Morissette | Alfredo
++apellido1 | apellido2 | nombre
+```
+
+⏱ Tiempo: 0.34 ms
+✅ Se usó índice(s) en la consulta: PRIMARY
+
+---
+
+## ❌ Query 11: Error
 - **Descripción**: 'NoneType' object is not iterable
 
