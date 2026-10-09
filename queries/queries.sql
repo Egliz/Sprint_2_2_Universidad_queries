@@ -3,6 +3,7 @@ SELECT apellido1,
        apellido2,
        nombre
 FROM persona
+WHERE tipo = 'alumno'
 ORDER BY apellido1 ASC,
          apellido2 ASC,
          nombre ASC;
@@ -12,7 +13,8 @@ SELECT nombre,
        apellido1,
        apellido2
 FROM persona
-WHERE telefono IS NULL;
+WHERE tipo = 'alumno'
+AND telefono IS NULL;
 
 -- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, apellido1, apellido2, fecha_nacimiento)
 SELECT id,
@@ -29,7 +31,8 @@ SELECT nombre,
        apellido2,
        nif
 FROM persona
-WHERE telefono IS NULL
+WHERE tipo = 'profesor'
+AND telefono IS NULL
 AND nif LIKE '%K';
 
 -- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7. (id, nombre, cuatrimestre, curso, id_grado)
@@ -152,13 +155,15 @@ LEFT JOIN profesor
 WHERE profesor.id_profesor IS NULL;
 
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
-SELECT departamento.nombre
+SELECT DISTINCT departamento.nombre
 FROM departamento
 LEFT JOIN profesor
     ON departamento.id = profesor.id_departamento
 LEFT JOIN asignatura
     ON profesor.id_profesor = asignatura.id_profesor
-WHERE asignatura.id IS NULL;
+LEFT JOIN alumno_se_matricula_asignatura
+    ON asignatura.id = alumno_se_matricula_asignatura.id_asignatura
+WHERE alumno_se_matricula_asignatura.id_asignatura IS NULL;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
 SELECT COUNT(*) AS total
@@ -187,10 +192,10 @@ FROM departamento
 LEFT JOIN profesor
     ON departamento.id = profesor.id_departamento
 GROUP BY departamento.id, departamento.nombre
-ORDER BY total DESC;
+ORDER BY total DESC, departamento.nombre;
 
 -- 20. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun. Tingues en compte que poden existir graus que no tenen assignatures associades. Aquests graus també han d'aparèixer en el llistat. El resultat haurà d'estar ordenat de major a menor pel nombre d'assignatures. (grau, total)
-SELECT grado.nombre AS grado,
+SELECT grado.nombre AS grau,
 COUNT(asignatura.id) AS total
 FROM grado
 LEFT JOIN asignatura
@@ -199,7 +204,7 @@ GROUP BY grado.id, grado.nombre
 ORDER BY total DESC;
 
 -- 21. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun, dels graus que tinguin més de 40 assignatures associades. (grau, total)
-SELECT grado.nombre AS grado,
+SELECT grado.nombre AS grau,
 COUNT(asignatura.id) AS total
 FROM grado
 LEFT JOIN asignatura
@@ -209,7 +214,7 @@ HAVING COUNT(asignatura.id) > 40
 ORDER BY total DESC;
 
 -- 22. Retorna un llistat que mostri el nom dels graus i la suma del nombre total de crèdits que hi ha per a cada tipus d'assignatura. El resultat ha de tenir tres columnes: nom del grau, tipus d'assignatura i la suma dels crèdits de totes les assignatures que hi ha d'aquest tipus. (grau, tipus, total_creditos)
-SELECT grado.nombre AS grado,
+SELECT grado.nombre AS grau,
        asignatura.tipo,
        SUM(asignatura.creditos) AS total_creditos
 FROM grado
